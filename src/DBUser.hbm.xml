@@ -1,0 +1,110 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping SYSTEM
+"D:\hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.db.DBUser" table="CLUB_MEMBER">
+		<id name="memberID" type="long">
+			<column name="memberID" not-null="true" />
+			<generator class="assigned"/>
+		</id>
+		<property name="firstname" type="string">
+			<column name="firstname"  not-null="true" />
+		</property>
+		<property name="surname" type="string">
+			<column name="surname" length="50" not-null="true" />
+		</property>
+		<property name="gender" type="string">
+			<column name="gender" length="10" not-null="true" />
+		</property>
+		<property name="email" type="string">
+			<column name="email" length="50" not-null="true" />
+		</property>
+		<property name="phoneNo" type="string" unique="true">
+			<column name="phoneNo" length="50" not-null="false" />
+		</property>
+		<property name="altPhoneNo" type="string">
+			<column name="altPhoneNo" length="50" not-null="false" />
+		</property>
+		<property name="address" type="string">
+			<column name="address" length="200" not-null="true" />
+		</property>
+		<property name="area" type="string">
+			<column name="area" length="50" not-null="true" />
+		</property>
+		<property name="city" type="string">
+			<column name="city" length="50" not-null="true" />
+		</property>
+		<property name="pinCode" type="int">
+			<column name="pinCode" not-null="true" />
+		</property>
+		<property name="dob" type="date">
+			<column name="dob" length="10" not-null="true" />
+		</property>
+		<property name="createdDate" type="date">
+			<column name="createdDate" length="10" not-null="true" />
+		</property>
+		<property name="lastPaymentDate" type="date">
+			<column name="lastPaymentDate" length="7" not-null="false" />
+		</property>
+		<property name="membershipExpiryDate" type="date">
+			<column name="membershipExpiryDate" length="7" not-null="true" />
+		</property>
+		<property name="membershipDetails" type="string">
+			<column name="membershipDetails" length="50" not-null="true" />
+		</property>
+		<property name="subscriptionType" type="string">
+			<column name="subscriptionType" length="50" not-null="true" />
+		</property>
+		<property name="paymentType" type="string">
+			<column name="paymentType" length="50" not-null="true" />
+		</property>
+		<property name="amountPaid" type="int">
+			<column name="amountPaid" not-null="true" />
+		</property>
+		<property name="name1" type="string">
+			<column name="name1" length="20" not-null="false" />
+		</property>
+		<property name="relationship1" type="string">
+			<column name="relationship1" length="20" not-null="false" />
+		</property>
+		<property name="gender1" type="string">
+			<column name="gender1" length="20" not-null="false" />
+		</property>
+		<property name="name2" type="string">
+			<column name="name2" length="20" not-null="false" />
+		</property>
+		<property name="relationship2" type="string">
+			<column name="relationship2" length="20" not-null="false" />
+		</property>
+		<property name="gender2" type="string">
+			<column name="gender2" length="20" not-null="false" />
+		</property>
+		<property name="name3" type="string">
+			<column name="name3" length="20" not-null="false" />
+		</property>
+		<property name="relationship3" type="string">
+			<column name="relationship3" length="20" not-null="false" />
+		</property>
+		<property name="gender3" type="string">
+			<column name="gender3" length="20" not-null="false" />
+		</property>
+		<property name="name4" type="string">
+			<column name="name4" length="20" not-null="false" />
+		</property>
+		<property name="relationship4" type="string">
+			<column name="relationship4" length="20" not-null="false" />
+		</property>
+		<property name="gender4" type="string">
+			<column name="gender4" length="20" not-null="false" />
+		</property>
+		<property name="name5" type="string">
+			<column name="name5" length="20" not-null="false" />
+		</property>
+		<property name="relationship5" type="string">
+			<column name="relationship5" length="20" not-null="false" />
+		</property>
+		<property name="gender5" type="string">
+			<column name="gender5" length="20" not-null="false" />
+		</property>
+	</class>
+</hibernate-mapping>
